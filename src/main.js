@@ -36,6 +36,15 @@ var argv = yargs.usage('Usage: diff2html [options] -- [diff args]')
     }
   })
   .options({
+    't': {
+      alias: 'template',
+      describe: 'Template filename',
+      nargs: 1,
+      type: 'string',
+      default: ''
+    }
+  })
+  .options({
     'su': {
       alias: 'summary',
       describe: 'Show files summary',

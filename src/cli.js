@@ -95,7 +95,7 @@
   };
 
   Diff2HtmlInterface.prototype._prepareHTML = function(content, config) {
-    var templatePath = path.resolve(__dirname, '..', 'dist', 'template.html');
+    var templatePath = (config.template.length > 0) ? config.template : path.resolve(__dirname, '..', 'dist', 'template.html');
     var template = utils.readFileSync(templatePath);
 
     var diff2htmlPath = path.join(path.dirname(require.resolve('diff2html')), '..');
